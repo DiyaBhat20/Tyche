@@ -1,6 +1,8 @@
-import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom"; 
 
 const HomePage = () => {
+  const navigate = useNavigate(); 
+
   return (
     <div className="flex flex-col flex-grow">      
       <div className="mt-2 flex justify-center text-white">
@@ -19,7 +21,7 @@ const HomePage = () => {
           market environment and see how Tyche can help.</p>
           <div className="flex justify-between ">
           <p className="text-[40px] py-4 text-[#FFAB3A]">SMNR</p>
-          <button className="text-white text-[25px] h-16 px-3 border-2 border-white hover:bg-[#242121]">GET STARTED</button>
+          <button onClick={()=> navigate('/input')} className="text-white text-[25px] h-16 px-3 border-2 border-white hover:bg-[#242121]">GET STARTED</button>
           </div>
         </div>
       </div>
