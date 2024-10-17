@@ -5,7 +5,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black px-4 pb-2 flex justify-between items-center">
+    <nav className="bg-black px-4 flex justify-between items-center">
       <div className="text-white">
         <h1 className="font-bold font-jeju md:text-[50px] text-[40px]">Tyche</h1>
         <p className="font-jaldi text-[15px] sm:text-[20px]">“A smile is a curve that sets everything straight.”</p>

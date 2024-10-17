@@ -2,9 +2,7 @@ import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      
+    <div className="flex flex-col flex-grow">      
       <div className="mt-2 flex justify-center text-white">
         <input               //Search Bar
           type="text"
