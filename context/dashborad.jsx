@@ -4,9 +4,9 @@ export const DashboardContext =createContext();
 
 export const DashboardProvider=({children})=>
 {
-    const [data,setdata]=useState({});
+    const [Res,setdata]=useState({});
     return(
-        <DashboardContext.Provider value={{data,setdata}}>
+        <DashboardContext.Provider value={{Res,setdata}}>
             {children}
         </DashboardContext.Provider>
     )
