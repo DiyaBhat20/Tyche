@@ -7,7 +7,8 @@ import OutputPage from './pages/OutputPage';
 import Volatility from './pages/Volatility';
 import PortfolioPositions from './pages/PortfolioPositions';
 import PortfolioWeights from './pages/PortfolioWeights';
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard.jsx';
+
 
 function App() {
   return (
