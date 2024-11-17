@@ -7,6 +7,7 @@ import OutputPage from './pages/OutputPage';
 import Volatility from './pages/Volatility';
 import PortfolioPositions from './pages/PortfolioPositions';
 import PortfolioWeights from './pages/PortfolioWeights';
+import Dashboard from './pages/dashboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/volatility" element={<Volatility />} />
           <Route path="/portfoliopositions" element={<PortfolioPositions />} />
           <Route path="/portfolioweights" element={<PortfolioWeights />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

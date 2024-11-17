@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { PortfolioContext } from "../../context/portfolio";
 
 const OutputPage = () => {
   const navigate = useNavigate(); 
-
+  const {res}=useContext(PortfolioContext);
+ // console.log(res);
+ const data=res.annualized_returns;
   const handleVolatilityClick = () => {
     navigate('/volatility');
   };
@@ -41,6 +44,30 @@ const OutputPage = () => {
       <div className="container mx-auto px-8 pb-4">
         <div className="mt-8 bg-[#131010] text-[#FFAB3A] w-[80%] h-[60%] mx-auto border-l-8 border-r-8 border-[#FFAB3A] px-10 py-4">
           {/* Content for OutputPage or other components can go here */}
+          <table className="min-w-full divide-y divide-gray-200 border border-gray-200" >
+      <thead className="bg-[#131010]">
+        <tr>
+          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#FFAB3A] uppercase tracking-wider">
+            Company
+          </th>
+          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#FFAB3A] uppercase tracking-wider">
+            Annualized Return
+          </th>
+        </tr>
+      </thead>
+      <tbody className="bg-[#131010] divide-y divide-gray-200">
+        {Object.entries(data).map(([company, returnVal]) => (
+          <tr key={company}>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#FFAB3A]">
+              {company}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-[#FFAB3A]">
+              {returnVal}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
         </div>
       </div>
     </div>
